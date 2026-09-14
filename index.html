@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unacboxd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     :root {
@@ -12,12 +16,14 @@
       --navy-light: #4B5694;
       --navy-lighter: #7288AE;
       --beige: #EAE0CF;
-      --orange: #F2765E;
+      --purple: #1B2CC1;
+      --orange: #DF301C;
       --xs-spacing: 4px;
       --s-spacing: 8px;
       --m-spacing: 16px;
       --l-spacing: 20px;
       --xl-spacing: 24px;
+      --xxl-spacing: 40px;
     }
 
     * {
@@ -28,7 +34,7 @@
 
     html {
       font-size: 62.5%;
-      font-family: Calibri, New Century Schoolbook, Arial, Helvetica, sans-serif;
+      font-family: "Arimo", sans-serif;
       color: var(--beige)
     }
 
@@ -41,13 +47,14 @@
       display: flex;
       flex-wrap: wrap;
       gap: 25px;
-      margin: 30px 0;
+      margin-top: var(--xxl-spacing);
       justify-content: center;
     }
 
     p {
-      font-size: 2rem;
+      font-size: 1.6rem;
       text-align: center;
+      font-weight: 900;
       margin-top: var(--m-spacing);
     }
 
@@ -61,24 +68,24 @@
 
     /* Podemos especificar a las imagenes dentro del nav de esta manera, no hay necesidad de usar class para cada una*/
     nav img {
-      width: 50px;
+      width: 45px;
       border-radius: 50%;
-    }
-
-    .contenedor-peli {
-      transition: box-shadow 0.2s ease-in;
-    }
-
-    .contenedor-peli:hover {
-      box-shadow: inset 0 0 0 5px var(--navy-dark);
-      cursor: pointer;
     }
 
     /* Se refiere a todas las imagenes DENTRO del contenedor que tiene la clase "contenedor-peli" */
     .contenedor-peli img {
-      width: 70px;
-      height: 105px;
+      width: 140px;
+      height: 210px;
       border-radius: 2px;
+      outline: 4px solid transparent;
+      outline-offset: -4px;
+      transition: outline 0.2s ease;
+      box-shadow: 0px 0 10px 1px var(--navy-dark);
+    }
+
+    .contenedor-peli img:hover {
+      outline-color: var(--orange);
+      cursor: pointer;
     }
 
     .form-busqueda {
@@ -90,7 +97,7 @@
     .form-radio {
       display: flex;
       justify-content: center;
-      gap: var(--l-spacing);
+      /* gap: var(--l-spacing); */
       margin-bottom: var(--m-spacing);
       margin-top: var(--m-spacing);
       /* margin: var(--m-spacing) 0; */
@@ -101,11 +108,23 @@
     }
 
     .form-radio label {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
+      font-weight: 900;
       background-color: var(--navy-dark);
       padding: var(--s-spacing);
-      border-radius: 15px;
+      transition: background-color 0.2s ease-in;
+      /* border-radius: 15px; */
 
+    }
+
+    .form-radio label:first-of-type {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .form-radio label:last-of-type {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
     /* Pseudoclase -> El estado del elemento */
@@ -127,6 +146,13 @@
       border: none;
       width: 300px;
       outline: none;
+      font-family: inherit;
+      font-size: 1.2rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    input[type="text"]:focus {
+      box-shadow: 0px 0px 15px 2px var(--navy-dark);
     }
 
     /* .img1 {
