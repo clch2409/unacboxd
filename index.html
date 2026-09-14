@@ -79,16 +79,18 @@
       border-radius: 2px;
       outline: 4px solid transparent;
       outline-offset: -4px;
-      transition: outline 0.2s ease;
-      box-shadow: 0px 0 10px 1px var(--navy-dark);
+      transition: outline 0.2s ease, box-shadow 0.2s ease-in;
+      box-shadow: 0px 0 20px 5px var(--navy-dark);
     }
 
     .contenedor-peli img:hover {
-      outline-color: var(--orange);
+      outline-color: var(--beige);
+      box-shadow: 0px 0 20px 5px var(--beige);
       cursor: pointer;
     }
 
     .form-busqueda {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -111,7 +113,7 @@
       font-size: 1.2rem;
       font-weight: 900;
       background-color: var(--navy-dark);
-      padding: var(--s-spacing);
+      padding: var(--s-spacing) var(--m-spacing);
       transition: background-color 0.2s ease-in;
       /* border-radius: 15px; */
 
@@ -152,7 +154,61 @@
     }
 
     input[type="text"]:focus {
-      box-shadow: 0px 0px 15px 2px var(--navy-dark);
+      box-shadow: 0px 0px 15px 2px var(--beige);
+    }
+
+    .form-container-filter {
+      display: flex;
+      position: relative;
+      width: 100%;
+    }
+
+    .filter-icon {
+      position: absolute;
+      right: var(--xxl-spacing);
+      color: var(--beige);
+    }
+
+    .form-container-filter:hover .filter-options {
+      display: block;
+    }
+
+    .form-container-filter:hover .filter-options ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-spacing);
+      padding: var(--s-spacing);
+      color: var(--beige);
+    }
+
+    .filter-options ul li {
+      border-radius: var(--xs-spacing);
+      padding: var(--s-spacing);
+      user-select: none;
+    }
+
+    .filter-options ul li:hover {
+      background-color: var(--navy-light);
+      color: var(--beige);
+      cursor: pointer;
+    }
+
+    .filter-options {
+      top: 5px;
+      background-color: var(--navy-dark);
+      position: absolute;
+      right: var(--xxl-spacing);
+      color: var(--navy-dark);
+      display: none;
+
+    }
+
+    .filter-options ul {
+      list-style: none;
+    }
+
+    #rating-dialog {
+      margin: auto auto;
     }
 
     /* .img1 {
@@ -189,6 +245,18 @@
     </div>
 
     <input type="text" name="busqueda" placeholder="Ingrese un texto para buscar">
+
+    <div class="form-container-filter">
+      <img class="filter-icon" src="./assets/icons/filter-icon.svg" alt="Icono de Filtrado">
+      <div class="filter-options">
+        <ul>
+          <li>Favoritos</li>
+          <li>Calificadas</li>
+          <li>Top 10 Mejores Calificadas</li>
+          <li>Top 10 Peores Calificadas</li>
+        </ul>
+      </div>
+    </div>
   </form>
 
   <div class="contenedor-img">
@@ -225,6 +293,10 @@
 
 
   </div>
+
+  <dialog id="rating-dialog">
+    <h2>Hola este es un dialog</h2>
+  </dialog>
 
   <script type="module" src="./main.js"></script>
 </body>
