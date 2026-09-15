@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite,star" />
   <link rel="stylesheet" href="style.css">
   <style>
     :root {
@@ -182,7 +183,7 @@
       gap: var(--xxl-spacing);
       margin-top: var(--xxl-spacing);
       justify-content: center;
-      margin: var(--xl-spacing);
+      margin: var(--xxl-spacing);
     }
 
     .contenedor-peli {
@@ -208,18 +209,28 @@
       cursor: pointer;
     }
 
-    .contenedor-peli span {
+    .star,
+    .heart {
+      font-variation-settings: 'FILL' 1;
       opacity: 0;
       visibility: hidden;
       position: absolute;
-      right: 16px;
-      bottom: 16px;
       transform: scale(1.0);
       transition: opacity 0.2s ease, color 0.2s ease, visibility 0.2s, transform 0.2s ease;
       user-select: none;
     }
 
-    .contenedor-peli img:hover+span,
+    .star {
+      left: 16px;
+      bottom: 16px;
+    }
+
+    .heart {
+      right: 16px;
+      bottom: 16px;
+    }
+
+    .contenedor-peli:hover span,
     span:hover {
       transform: scale(1.5);
       visibility: visible;
@@ -227,13 +238,53 @@
       cursor: pointer;
     }
 
-    #rating-dialog {
+    #rating-dialog:modal {
       margin: auto;
-
+      padding: var(--xxl-spacing);
+      border: none;
+      border-radius: 10px;
+      background-color: var(--navy-dark);
+      color: var(--beige);
+      font-size: 2rem;
     }
 
-    .favourite {
+    #rating-dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .rating-stars {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stars {
+      margin: var(--m-spacing) 0;
+    }
+
+    .stars input {
+      appearance: none;
+    }
+
+    .stars label {
+      font-size: 3rem;
+    }
+
+    .non-favourite,
+    .non-calificated {
+      color: var(--navy-dark);
+    }
+
+    .favourite-heart {
       color: var(--orange);
+    }
+
+    .calificated {
+      color: gold;
+    }
+
+    .dont-move {
+      overflow: hidden;
     }
 
     @media(min-width: 350px) {
@@ -323,11 +374,11 @@
       <div class="form-container-filter">
         <img class="filter-icon" src="./assets/icons/filter-icon.svg" alt="Icono de Filtrado">
         <div class="filter-options">
-          <ul>
-            <li>Favoritos</li>
-            <li>Calificadas</li>
-            <li>Top 10 Mejores Calificadas</li>
-            <li>Top 10 Peores Calificadas</li>
+          <ul class="list-options">
+            <li id="fav">Favoritos</li>
+            <li id="cal">Calificadas</li>
+            <li id="topMejor">Top 10 Mejores Calificadas</li>
+            <li id="topPeor">Top 10 Peores Calificadas</li>
           </ul>
         </div>
       </div>
@@ -337,52 +388,31 @@
   <div class="contenedor-img">
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-icons">favorite</span>
+      <span class="material-symbols-outlined non-favourite heart">favorite</span>
+      <span class="material-symbols-outlined non-favourite star">star</span>
     </div>
   </div>
 
   <dialog id="rating-dialog">
     <h2>Califique su Película</h2>
-    <div class="rating-stars">
-      <label for="star-1" name="rating"></label>
-      <input type="radio">
-      <label for="star-2" name="rating"></label>
-      <input type="radio">
-      <label for="star-3" name="rating"></label>
-      <input type="radio">
-      <label for="star-4" name="rating"></label>
-      <input type="radio">
-      <label for="star-5" name="rating"></label>
-      <input type="radio">
-    </div>
+    <form class="rating-stars">
+      <div class="stars">
+        <label for="star-1" name="rating">★</label>
+        <input type="radio">
+        <label for="star-2" name="rating">★</label>
+        <input type="radio">
+        <label for="star-3" name="rating">★</label>
+        <input type="radio">
+        <label for="star-4" name="rating">★</label>
+        <input type="radio">
+        <label for="star-5" name="rating">★</label>
+        <input type="radio">
+      </div>
+      <div class="rating-buttons">
+        <button type="button" id="rating-close">Canelar</button>
+        <button type="button" id="rating-send">Enviar</button>
+      </div>
+    </form>
   </dialog>
 
   <script type="module" src="./main.js"></script>
