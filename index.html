@@ -42,15 +42,6 @@
       background-color: var(--navy-light);
     }
 
-    .contenedor-img {
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin-top: var(--xxl-spacing);
-      justify-content: center;
-    }
-
     p {
       font-size: 1.6rem;
       text-align: center;
@@ -66,27 +57,9 @@
       /* box-shadow: 4px 0px 30px 8px var(--navy-dark); */
     }
 
-    /* Podemos especificar a las imagenes dentro del nav de esta manera, no hay necesidad de usar class para cada una*/
     nav img {
       width: 45px;
       border-radius: 50%;
-    }
-
-    /* Se refiere a todas las imagenes DENTRO del contenedor que tiene la clase "contenedor-peli" */
-    .contenedor-peli img {
-      width: 140px;
-      height: 210px;
-      border-radius: 2px;
-      outline: 4px solid transparent;
-      outline-offset: -4px;
-      transition: outline 0.2s ease, box-shadow 0.2s ease-in;
-      box-shadow: 0px 0 20px 5px var(--navy-dark);
-    }
-
-    .contenedor-peli img:hover {
-      outline-color: var(--beige);
-      box-shadow: 0px 0 20px 5px var(--beige);
-      cursor: pointer;
     }
 
     .form-busqueda {
@@ -99,7 +72,8 @@
     .form-radio {
       display: flex;
       justify-content: center;
-      /* gap: var(--l-spacing); */
+      flex-direction: column;
+      gap: var(--xs-spacing);
       margin-bottom: var(--m-spacing);
       margin-top: var(--m-spacing);
       /* margin: var(--m-spacing) 0; */
@@ -112,21 +86,12 @@
     .form-radio label {
       font-size: 1.2rem;
       font-weight: 900;
+      text-align: center;
       background-color: var(--navy-dark);
       padding: var(--s-spacing) var(--m-spacing);
       transition: background-color 0.2s ease-in;
-      /* border-radius: 15px; */
+      border-radius: 10px;
 
-    }
-
-    .form-radio label:first-of-type {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-    }
-
-    .form-radio label:last-of-type {
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
     }
 
     /* Pseudoclase -> El estado del elemento */
@@ -140,6 +105,13 @@
       background-color: var(--navy-lighter);
       cursor: pointer;
       color: var(--navy-dark);
+    }
+
+    .container-filter-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--m-spacing);
     }
 
     input[type="text"] {
@@ -160,17 +132,12 @@
     .form-container-filter {
       display: flex;
       position: relative;
-      width: 100%;
-    }
-
-    .filter-icon {
-      position: absolute;
-      right: var(--xxl-spacing);
-      color: var(--beige);
+      max-width: fit-content;
     }
 
     .form-container-filter:hover .filter-options {
       display: block;
+      min-width: fit-content;
     }
 
     .form-container-filter:hover .filter-options ul {
@@ -197,18 +164,96 @@
       top: 5px;
       background-color: var(--navy-dark);
       position: absolute;
-      right: var(--xxl-spacing);
+      right: 0;
       color: var(--navy-dark);
       display: none;
-
     }
 
     .filter-options ul {
       list-style: none;
     }
 
+    .contenedor-img {
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--m-spacing);
+      row-gap: var(--m-spacing);
+      margin-top: var(--xxl-spacing);
+      justify-content: center;
+    }
+
+    .contenedor-peli img {
+      width: 140px;
+      height: 210px;
+      border-radius: 2px;
+      outline: 4px solid transparent;
+      outline-offset: -4px;
+      transition: outline 0.2s ease, box-shadow 0.2s ease-in;
+      box-shadow: 0px 0 20px 5px var(--navy-dark);
+      margin: var(--m-spacing);
+    }
+
+    .contenedor-peli img:hover {
+      outline-color: var(--beige);
+      box-shadow: 0px 0 20px 5px var(--beige);
+      cursor: pointer;
+    }
+
     #rating-dialog {
       margin: auto auto;
+    }
+
+    @media(min-width: 350px) {
+      .contenedor-img {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(min-width: 550px) {
+      .form-radio {
+        flex-direction: row;
+        gap: 0;
+      }
+
+      .form-radio label {
+        border-radius: 0;
+      }
+
+      .form-radio label:first-of-type {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .form-radio label:last-of-type {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .contenedor-img {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .container-filter-section {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .filter-options {
+        translate: 70% 0;
+      }
+    }
+
+    @media(min-width: 730px) {
+      .contenedor-img {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media(min-width: 870px) {
+      .contenedor-img {
+        grid-template-columns: repeat(5, 1fr);
+      }
     }
 
     /* .img1 {
@@ -244,17 +289,19 @@
       <label for="gen">Genero</label>
     </div>
 
-    <input type="text" name="busqueda" placeholder="Ingrese un texto para buscar">
+    <div class="container-filter-section">
+      <input type="text" name="busqueda" placeholder="Ingrese un texto para buscar">
 
-    <div class="form-container-filter">
-      <img class="filter-icon" src="./assets/icons/filter-icon.svg" alt="Icono de Filtrado">
-      <div class="filter-options">
-        <ul>
-          <li>Favoritos</li>
-          <li>Calificadas</li>
-          <li>Top 10 Mejores Calificadas</li>
-          <li>Top 10 Peores Calificadas</li>
-        </ul>
+      <div class="form-container-filter">
+        <img class="filter-icon" src="./assets/icons/filter-icon.svg" alt="Icono de Filtrado">
+        <div class="filter-options">
+          <ul>
+            <li>Favoritos</li>
+            <li>Calificadas</li>
+            <li>Top 10 Mejores Calificadas</li>
+            <li>Top 10 Peores Calificadas</li>
+          </ul>
+        </div>
       </div>
     </div>
   </form>
@@ -295,7 +342,7 @@
   </div>
 
   <dialog id="rating-dialog">
-    <h2>Hola este es un dialog</h2>
+    <h2>Califique su Película</h2>
   </dialog>
 
   <script type="module" src="./main.js"></script>
