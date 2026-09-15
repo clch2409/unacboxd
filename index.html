@@ -209,18 +209,21 @@
     }
 
     .contenedor-peli span {
+      opacity: 0;
       visibility: hidden;
       position: absolute;
       right: 16px;
       bottom: 16px;
-      transform: scale(1.5);
-      transition: visibility 0.2s ease, color 0.2s ease;
+      transform: scale(1.0);
+      transition: opacity 0.2s ease, color 0.2s ease, visibility 0.2s, transform 0.2s ease;
       user-select: none;
     }
 
     .contenedor-peli img:hover+span,
     span:hover {
+      transform: scale(1.5);
       visibility: visible;
+      opacity: 1;
       cursor: pointer;
     }
 
