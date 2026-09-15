@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="style.css">
   <style>
     :root {
@@ -167,6 +168,7 @@
       right: 0;
       color: var(--navy-dark);
       display: none;
+      z-index: 999;
     }
 
     .filter-options ul {
@@ -177,31 +179,58 @@
       text-align: center;
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--m-spacing);
-      row-gap: var(--m-spacing);
+      gap: var(--xxl-spacing);
       margin-top: var(--xxl-spacing);
       justify-content: center;
+      margin: var(--xl-spacing);
+    }
+
+    .contenedor-peli {
+      position: relative;
     }
 
     .contenedor-peli img {
-      width: 140px;
-      height: 210px;
+      width: 100%;
+      height: 100%;
       border-radius: 2px;
       outline: 4px solid transparent;
       outline-offset: -4px;
       transition: outline 0.2s ease, box-shadow 0.2s ease-in;
       box-shadow: 0px 0 20px 5px var(--navy-dark);
-      margin: var(--m-spacing);
+      /* margin: var(--m-spacing); */
+
     }
 
-    .contenedor-peli img:hover {
+    .contenedor-peli img:hover,
+    .contenedor-peli:has(span:hover) img {
       outline-color: var(--beige);
       box-shadow: 0px 0 20px 5px var(--beige);
       cursor: pointer;
     }
 
+    .contenedor-peli span {
+      visibility: hidden;
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      transform: scale(1.5);
+      transition: visibility 0.2s ease, color 0.2s ease;
+      user-select: none;
+    }
+
+    .contenedor-peli img:hover+span,
+    span:hover {
+      visibility: visible;
+      cursor: pointer;
+    }
+
     #rating-dialog {
-      margin: auto auto;
+      margin: auto;
+
+    }
+
+    .favourite {
+      color: var(--orange);
     }
 
     @media(min-width: 350px) {
@@ -261,25 +290,15 @@
         grid-template-columns: repeat(6, 1fr);
       }
     }
-
-    /* .img1 {
-      border-radius: 50%;
-    }
-
-    .img2 {
-      border-radius: 50%;
-    } */
   </style>
 </head>
 
 <body>
   <nav>
-    <!-- Coloca dos imagenes, el logo y la de usuario -->
     <img class="img1" src="./assets/images/logo_sin_texto.png" alt="Logo">
     <img class="img2" src="./assets/images/usuario.webp" alt="Usuario">
   </nav>
   <p>Buscar por: </p>
-  <!-- Crea otro div con 4 inputs de tipo radio y colocalos de manera horizontal -->
   <form class="form-busqueda">
     <div class="form-radio">
       <input type="radio" id="peli" name="busqueda" value="pelicula">
@@ -315,38 +334,52 @@
   <div class="contenedor-img">
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-    </div>
-    <div class="contenedor-peli">
-      <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
+      <span class="material-icons">favorite</span>
     </div>
   </div>
 
   <dialog id="rating-dialog">
     <h2>Califique su Película</h2>
+    <div class="rating-stars">
+      <label for="star-1" name="rating"></label>
+      <input type="radio">
+      <label for="star-2" name="rating"></label>
+      <input type="radio">
+      <label for="star-3" name="rating"></label>
+      <input type="radio">
+      <label for="star-4" name="rating"></label>
+      <input type="radio">
+      <label for="star-5" name="rating"></label>
+      <input type="radio">
+    </div>
   </dialog>
 
   <script type="module" src="./main.js"></script>
