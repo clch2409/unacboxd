@@ -118,7 +118,7 @@
       padding: var(--s-spacing);
       border-radius: var(--s-spacing);
       border: none;
-      width: 300px;
+      width: 100%;
       outline: none;
       font-family: inherit;
       font-size: 1.2rem;
@@ -250,9 +250,15 @@
       }
     }
 
-    @media(min-width: 870px) {
+    @media(min-width: 920px) {
       .contenedor-img {
         grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    @media(min-width: 1150px) {
+      .contenedor-img {
+        grid-template-columns: repeat(6, 1fr);
       }
     }
 
@@ -337,8 +343,6 @@
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
     </div>
-
-
   </div>
 
   <dialog id="rating-dialog">
