@@ -20,6 +20,7 @@
       --beige: #EAE0CF;
       --purple: #1B2CC1;
       --orange: #DF301C;
+      --orange-dark: #8b1e11;
       --xs-spacing: 4px;
       --s-spacing: 8px;
       --m-spacing: 16px;
@@ -93,7 +94,6 @@
       padding: var(--s-spacing) var(--m-spacing);
       transition: background-color 0.2s ease-in;
       border-radius: 10px;
-
     }
 
     /* Pseudoclase -> El estado del elemento */
@@ -216,22 +216,21 @@
       visibility: hidden;
       position: absolute;
       transform: scale(1.0);
-      transition: opacity 0.2s ease, color 0.2s ease, visibility 0.2s, transform 0.2s ease;
+      transition: opacity 0.2s ease, color 0.2s ease, visibility 0.2s;
       user-select: none;
     }
 
     .star {
-      left: 16px;
       bottom: 16px;
+      left: 16px;
     }
 
     .heart {
-      right: 16px;
       bottom: 16px;
+      right: 16px;
     }
 
-    .contenedor-peli:hover span,
-    span:hover {
+    .contenedor-peli:hover span {
       transform: scale(1.5);
       visibility: visible;
       opacity: 1;
@@ -243,7 +242,7 @@
       padding: var(--xxl-spacing);
       border: none;
       border-radius: 10px;
-      background-color: var(--navy-dark);
+      background-color: var(--navy-lighter);
       color: var(--beige);
       font-size: 2rem;
     }
@@ -260,6 +259,8 @@
 
     .stars {
       margin: var(--m-spacing) 0;
+      display: flex;
+      flex-direction: row-reverse;
     }
 
     .stars input {
@@ -267,15 +268,73 @@
     }
 
     .stars label {
-      font-size: 3rem;
+      font-size: 5rem;
+      color: var(--navy-light);
     }
 
-    .non-favourite,
+    .stars label:hover,
+    .stars label:hover~label {
+      color: gold;
+    }
+
+    .stars input:checked~label {
+      color: gold;
+    }
+
+    .stars:hover input:checked~label {
+      color: var(--navy-light);
+    }
+
+    .stars:hover label:hover,
+    .stars:hover label:hover~label {
+      color: gold;
+    }
+
+    .rating-buttons {
+      display: flex;
+      gap: var(--m-spacing);
+      margin-top: var(--m-spacing);
+    }
+
+    #rating-close,
+    #rating-send {
+      color: var(--beige);
+      font-family: inherit;
+      font-size: 1.6rem;
+      padding: var(--m-spacing);
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 2px var(--navy-dark);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    #rating-close {
+      background-color: var(--orange-dark);
+    }
+
+    #rating-send {
+      background-color: var(--navy-dark);
+    }
+
+    #rating-close:hover {
+      background-color: var(--orange);
+      cursor: pointer;
+      box-shadow: 0 0 20px 2px var(--orange);
+    }
+
+    #rating-send:hover {
+      background-color: var(--navy-light);
+      cursor: pointer;
+      box-shadow: 0 0 20px 2px var(--navy-light);
+    }
+
+
+    .non-favorite,
     .non-calificated {
       color: var(--navy-dark);
     }
 
-    .favourite-heart {
+    .favorite-heart {
       color: var(--orange);
     }
 
@@ -388,8 +447,8 @@
   <div class="contenedor-img">
     <div class="contenedor-peli">
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
-      <span class="material-symbols-outlined non-favourite heart">favorite</span>
-      <span class="material-symbols-outlined non-favourite star">star</span>
+      <span class="material-symbols-outlined non-favorite heart">favorite</span>
+      <span class="material-symbols-outlined non-favorite star">star</span>
     </div>
   </div>
 
@@ -397,16 +456,16 @@
     <h2>Califique su Película</h2>
     <form class="rating-stars">
       <div class="stars">
-        <label for="star-1" name="rating">★</label>
-        <input type="radio">
-        <label for="star-2" name="rating">★</label>
-        <input type="radio">
-        <label for="star-3" name="rating">★</label>
-        <input type="radio">
-        <label for="star-4" name="rating">★</label>
-        <input type="radio">
-        <label for="star-5" name="rating">★</label>
-        <input type="radio">
+        <input type="radio" id="star-1" name="rating" value="5">
+        <label for="star-1">★</label>
+        <input type="radio" id="star-2" name="rating" value="4">
+        <label for="star-2">★</label>
+        <input type="radio" id="star-3" name="rating" value="3">
+        <label for="star-3">★</label>
+        <input type="radio" id="star-4" name="rating" value="2">
+        <label for="star-4">★</label>
+        <input type="radio" id="star-5" name="rating" value="1">
+        <label for="star-5">★</label>
       </div>
       <div class="rating-buttons">
         <button type="button" id="rating-close">Canelar</button>

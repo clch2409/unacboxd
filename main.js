@@ -18,7 +18,7 @@ function mostrarPeliculas() {
     html += `
       <div class="contenedor-peli">
         <img src="${peli.poster}" alt="${peli.titulo}">
-        <span class="material-symbols-outlined non-favourite heart" id="peli-${peli.id}">favorite</span>
+        <span class="material-symbols-outlined non-favorite heart" id="peli-${peli.id}">favorite</span>
         <span class="material-symbols-outlined non-calificated star" id="peli-${peli.id}">star</span>
     </div>
     `;
@@ -36,7 +36,7 @@ function agregarFavoritoCalificada(evento) {
     );
 
     if (target.classList.contains("heart")) {
-      target.classList.toggle("favourite-heart");
+      target.classList.toggle("favorite-heart");
       target.classList.toggle("non-favourite");
       if (target.classList.contains("favourite-heart")) {
         pelicula_encontrada.favorito = true;
@@ -72,3 +72,5 @@ function cerrarModal() {
   dialog.close();
   document.querySelector("body").classList.toggle("dont-move");
 }
+
+function filtrarPeliculas() {}
