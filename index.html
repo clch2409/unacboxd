@@ -10,400 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite,star" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite,star,close" />
   <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --navy-dark: #111844;
-      --navy-light: #4B5694;
-      --navy-lighter: #7288AE;
-      --beige: #EAE0CF;
-      --purple: #1B2CC1;
-      --orange: #DF301C;
-      --orange-dark: #8b1e11;
-      --xs-spacing: 4px;
-      --s-spacing: 8px;
-      --m-spacing: 16px;
-      --l-spacing: 20px;
-      --xl-spacing: 24px;
-      --xxl-spacing: 40px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      font-size: 62.5%;
-      font-family: "Arimo", sans-serif;
-      color: var(--beige)
-    }
-
-    body {
-      background-color: var(--navy-light);
-    }
-
-    p {
-      font-size: 1.6rem;
-      text-align: center;
-      font-weight: 900;
-      margin-top: var(--m-spacing);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 20px;
-      background-color: var(--navy-dark);
-      /* box-shadow: 4px 0px 30px 8px var(--navy-dark); */
-    }
-
-    nav img {
-      width: 45px;
-      border-radius: 50%;
-    }
-
-    .form-busqueda {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .form-radio {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      gap: var(--xs-spacing);
-      margin-bottom: var(--m-spacing);
-      margin-top: var(--m-spacing);
-      /* margin: var(--m-spacing) 0; */
-    }
-
-    .form-radio input[type="radio"] {
-      appearance: none;
-    }
-
-    .form-radio label {
-      font-size: 1.2rem;
-      font-weight: 900;
-      text-align: center;
-      background-color: var(--navy-dark);
-      padding: var(--s-spacing) var(--m-spacing);
-      transition: background-color 0.2s ease-in;
-      border-radius: 10px;
-    }
-
-    /* Pseudoclase -> El estado del elemento */
-    .form-radio label:hover {
-      background-color: var(--navy-lighter);
-      cursor: pointer;
-      color: var(--navy-dark);
-    }
-
-    input[type="radio"]:checked+label {
-      background-color: var(--navy-lighter);
-      cursor: pointer;
-      color: var(--navy-dark);
-    }
-
-    .container-filter-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--m-spacing);
-    }
-
-    input[type="text"] {
-      padding: var(--s-spacing);
-      border-radius: var(--s-spacing);
-      border: none;
-      width: 100%;
-      outline: none;
-      font-family: inherit;
-      font-size: 1.2rem;
-      transition: box-shadow 0.2s ease;
-    }
-
-    input[type="text"]:focus {
-      box-shadow: 0px 0px 15px 2px var(--beige);
-    }
-
-    .form-container-filter {
-      display: flex;
-      position: relative;
-      max-width: fit-content;
-    }
-
-    .form-container-filter:hover .filter-options {
-      display: block;
-      min-width: fit-content;
-    }
-
-    .form-container-filter:hover .filter-options ul {
-      display: flex;
-      flex-direction: column;
-      gap: var(--s-spacing);
-      padding: var(--s-spacing);
-      color: var(--beige);
-    }
-
-    .filter-options ul li {
-      border-radius: var(--xs-spacing);
-      padding: var(--s-spacing);
-      user-select: none;
-    }
-
-    .filter-options ul li:hover {
-      background-color: var(--navy-light);
-      color: var(--beige);
-      cursor: pointer;
-    }
-
-    .filter-options {
-      top: 5px;
-      background-color: var(--navy-dark);
-      position: absolute;
-      right: 0;
-      color: var(--navy-dark);
-      display: none;
-      z-index: 999;
-    }
-
-    .filter-options ul {
-      list-style: none;
-    }
-
-    .contenedor-img {
-      text-align: center;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--xxl-spacing);
-      margin-top: var(--xxl-spacing);
-      justify-content: center;
-      margin: var(--xxl-spacing);
-    }
-
-    .contenedor-peli {
-      position: relative;
-    }
-
-    .contenedor-peli img {
-      width: 100%;
-      height: 100%;
-      border-radius: 2px;
-      outline: 4px solid transparent;
-      outline-offset: -4px;
-      transition: outline 0.2s ease, box-shadow 0.2s ease-in;
-      box-shadow: 0px 0 20px 5px var(--navy-dark);
-      /* margin: var(--m-spacing); */
-
-    }
-
-    .contenedor-peli img:hover,
-    .contenedor-peli:has(span:hover) img {
-      outline-color: var(--beige);
-      box-shadow: 0px 0 20px 5px var(--beige);
-      cursor: pointer;
-    }
-
-    .star,
-    .heart {
-      font-variation-settings: 'FILL' 1;
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      transform: scale(1.0);
-      transition: opacity 0.2s ease, color 0.2s ease, visibility 0.2s;
-      user-select: none;
-    }
-
-    .star {
-      bottom: 16px;
-      left: 16px;
-    }
-
-    .heart {
-      bottom: 16px;
-      right: 16px;
-    }
-
-    .contenedor-peli:hover span {
-      transform: scale(1.5);
-      visibility: visible;
-      opacity: 1;
-      cursor: pointer;
-    }
-
-    #rating-dialog:modal {
-      margin: auto;
-      padding: var(--xxl-spacing);
-      border: none;
-      border-radius: 10px;
-      background-color: var(--navy-lighter);
-      color: var(--beige);
-      font-size: 2rem;
-    }
-
-    #rating-dialog::backdrop {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .rating-stars {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .stars {
-      margin: var(--m-spacing) 0;
-      display: flex;
-      flex-direction: row-reverse;
-    }
-
-    .stars input {
-      appearance: none;
-    }
-
-    .stars label {
-      font-size: 5rem;
-      color: var(--navy-light);
-    }
-
-    .stars label:hover,
-    .stars label:hover~label {
-      color: gold;
-    }
-
-    .stars input:checked~label {
-      color: gold;
-    }
-
-    .stars:hover input:checked~label {
-      color: var(--navy-light);
-    }
-
-    .stars:hover label:hover,
-    .stars:hover label:hover~label {
-      color: gold;
-    }
-
-    .rating-buttons {
-      display: flex;
-      gap: var(--m-spacing);
-      margin-top: var(--m-spacing);
-    }
-
-    #rating-close,
-    #rating-send {
-      color: var(--beige);
-      font-family: inherit;
-      font-size: 1.6rem;
-      padding: var(--m-spacing);
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 20px 2px var(--navy-dark);
-      transition: box-shadow 0.2s ease, background-color 0.2s ease;
-    }
-
-    #rating-close {
-      background-color: var(--orange-dark);
-    }
-
-    #rating-send {
-      background-color: var(--navy-dark);
-    }
-
-    #rating-close:hover {
-      background-color: var(--orange);
-      cursor: pointer;
-      box-shadow: 0 0 20px 2px var(--orange);
-    }
-
-    #rating-send:hover {
-      background-color: var(--navy-light);
-      cursor: pointer;
-      box-shadow: 0 0 20px 2px var(--navy-light);
-    }
-
-
-    .non-favorite,
-    .non-calificated {
-      color: var(--navy-dark);
-    }
-
-    .favorite-heart {
-      color: var(--orange);
-    }
-
-    .calificated {
-      color: gold;
-    }
-
-    .dont-move {
-      overflow: hidden;
-    }
-
-    @media(min-width: 350px) {
-      .contenedor-img {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media(min-width: 550px) {
-      .form-radio {
-        flex-direction: row;
-        gap: 0;
-      }
-
-      .form-radio label {
-        border-radius: 0;
-      }
-
-      .form-radio label:first-of-type {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-
-      .form-radio label:last-of-type {
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
-
-      .contenedor-img {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .container-filter-section {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .filter-options {
-        translate: 70% 0;
-      }
-    }
-
-    @media(min-width: 730px) {
-      .contenedor-img {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    @media(min-width: 920px) {
-      .contenedor-img {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-    @media(min-width: 1150px) {
-      .contenedor-img {
-        grid-template-columns: repeat(6, 1fr);
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -414,21 +22,24 @@
   <p>Buscar por: </p>
   <form class="form-busqueda">
     <div class="form-radio">
-      <input type="radio" id="peli" name="busqueda" value="pelicula">
-      <label for="peli">Pelicula</label>
+      <div class="radios">
+        <input type="radio" id="peli" name="busqueda" value="pelicula">
+        <label for="peli">Pelicula</label>
 
-      <input type="radio" id="direc" name="busqueda" value="director">
-      <label for="direc">Director</label>
+        <input type="radio" id="direc" name="busqueda" value="director">
+        <label for="direc">Director</label>
 
-      <input type="radio" id="actor" name="busqueda" value="actor">
-      <label for="actor">Actor/Actriz</label>
+        <input type="radio" id="actor" name="busqueda" value="actor">
+        <label for="actor">Actor/Actriz</label>
 
-      <input type="radio" id="gen" name="busqueda" value="genero">
-      <label for="gen">Genero</label>
+        <input type="radio" id="gen" name="busqueda" value="genero">
+        <label for="gen">Genero</label>
+      </div>
+      <span class="material-symbols-outlined quit-find-icon">close</span>
     </div>
 
     <div class="container-filter-section">
-      <input type="text" name="busqueda" placeholder="Ingrese un texto para buscar">
+      <input type="text" name="busqueda" placeholder="Ingrese un texto para buscar" id="find-movie">
 
       <div class="form-container-filter">
         <img class="filter-icon" src="./assets/icons/filter-icon.svg" alt="Icono de Filtrado">
@@ -436,11 +47,13 @@
           <ul class="list-options">
             <li id="fav">Favoritos</li>
             <li id="cal">Calificadas</li>
-            <li id="topMejor">Top 10 Mejores Calificadas</li>
-            <li id="topPeor">Top 10 Peores Calificadas</li>
+            <li id="topMejor">Mejores Calificadas</li>
+            <li id="topPeor">Peores Calificadas</li>
           </ul>
         </div>
       </div>
+
+      <span class="material-symbols-outlined non-filter-icon">close</span>
     </div>
   </form>
 
