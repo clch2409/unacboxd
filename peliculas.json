@@ -11,11 +11,11 @@
     "elenco": ["Marlon Brando", "Al Pacino", "James Caan", "Diane Keaton"],
     "sinopsis": "El patriarca de una familia mafiosa de Nueva York cede gradualmente el control de su imperio criminal a su reacio hijo menor.",
     "poster": "assets/posters/el-padrino.jpg",
-    "rating": 4.9,
     "favorito": false,
     "calificada": false,
     "color": "#5B1A1A",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [4.8, 4.8, 4.9, 5, 4.9, 4.4]
   },
   {
     "id": 2,
@@ -34,11 +34,11 @@
     ],
     "sinopsis": "Las vidas de dos sicarios, un boxeador y una pareja de ladrones se entrelazan en una serie de historias narradas de forma no lineal.",
     "poster": "assets/posters/pulp-fiction.jpg",
-    "rating": 4.7,
     "favorito": false,
     "calificada": false,
     "color": "#D35400",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [4.8, 4.6, 4.6, 4.7, 4.8, 5]
   },
   {
     "id": 3,
@@ -57,11 +57,11 @@
     ],
     "sinopsis": "Batman debe enfrentar al Joker, un criminal caótico que pone a prueba los límites morales de Gotham City.",
     "poster": "assets/posters/caballero-noche.jpg",
-    "rating": 4.8,
     "favorito": false,
     "calificada": false,
     "color": "#1C2733",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [5, 4.8, 4.5, 4.4, 4.9, 5]
   },
   {
     "id": 4,
@@ -75,11 +75,11 @@
     "elenco": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
     "sinopsis": "Un banquero condenado injustamente por asesinato forja una amistad profunda con otro recluso mientras busca la esperanza en prisión.",
     "poster": "assets/posters/cadena-perpetua.jpg",
-    "rating": 4.9,
     "favorito": false,
     "calificada": false,
     "color": "#52616B",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.9, 4.9, 5, 4.4, 4.8, 5]
   },
   {
     "id": 5,
@@ -93,11 +93,11 @@
     "elenco": ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
     "sinopsis": "Un artista pobre y una joven de alta sociedad viven un romance a bordo del transatlántico que se hundiría en su viaje inaugural.",
     "poster": "assets/posters/titanic.jpg",
-    "rating": 4.5,
     "favorito": false,
     "calificada": false,
     "color": "#147D92",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.8, 4.4, 4.6, 4.6, 4.8, 4.1]
   },
   {
     "id": 6,
@@ -111,11 +111,11 @@
     "elenco": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
     "sinopsis": "Un programador descubre que la realidad que conoce es una simulación controlada por máquinas y se une a la resistencia humana.",
     "poster": "assets/posters/matrix.jpg",
-    "rating": 4.7,
     "favorito": false,
     "calificada": false,
     "color": "#16A085",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.9, 4.2, 3.8, 4.5, 4.4, 5]
   },
   {
     "id": 7,
@@ -129,11 +129,11 @@
     "elenco": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
     "sinopsis": "Un hombre de bondad inagotable e intelecto limitado narra cómo, sin proponérselo, participó en los grandes eventos del siglo XX.",
     "poster": "assets/posters/forrest-gump.jpg",
-    "rating": 4.6,
     "favorito": false,
     "calificada": false,
     "color": "#D4A017",
-    "fondoClaro": true
+    "fondoClaro": true,
+    "calificaciones": [4.8, 4.2, 4.9, 4.2, 4.6, 4.5]
   },
   {
     "id": 8,
@@ -147,11 +147,11 @@
     "elenco": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
     "sinopsis": "Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
     "poster": "assets/posters/interstellar.jpg",
-    "rating": 4.6,
     "favorito": false,
     "calificada": false,
     "color": "#253B80",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [4.6, 4.9, 4.8, 4.7, 4.8, 4.8]
   },
   {
     "id": 9,
@@ -165,11 +165,11 @@
     "elenco": ["Elijah Wood", "Ian McKellen", "Viggo Mortensen"],
     "sinopsis": "Un hobbit emprende un peligroso viaje para destruir un anillo mágico y evitar que caiga en manos del señor oscuro Sauron.",
     "poster": "assets/posters/lotr-comunidad.jpg",
-    "rating": 4.8,
     "favorito": false,
     "calificada": false,
     "color": "#6B4F8A",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [4.6, 4.5, 4.6, 5.0, 4.7, 5]
   },
   {
     "id": 10,
@@ -183,11 +183,11 @@
     "elenco": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"],
     "sinopsis": "Un general romano traicionado es reducido a esclavitud y se convierte en gladiador para vengarse del emperador que asesinó a su familia.",
     "poster": "assets/posters/gladiador.jpg",
-    "rating": 4.5,
     "favorito": false,
     "calificada": false,
     "color": "#8E2C2C",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [4.2, 4.1, 4.8, 5.0, 4.7, 4.8]
   },
   {
     "id": 11,
@@ -201,11 +201,11 @@
     "elenco": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
     "sinopsis": "Una familia pobre se infiltra poco a poco en la vida de una familia adinerada, desencadenando consecuencias inesperadas.",
     "poster": "assets/posters/parasitos.jpg",
-    "rating": 4.7,
     "favorito": false,
     "calificada": false,
     "color": "#2F6B4F",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [5, 4.7, 4.2, 4.5, 5, 4.2]
   },
   {
     "id": 12,
@@ -219,11 +219,11 @@
     "elenco": ["Anthony Gonzalez", "Gael García Bernal", "Benjamin Bratt"],
     "sinopsis": "Un niño músico es transportado a la Tierra de los Muertos, donde descubre los secretos de su familia durante el Día de Muertos.",
     "poster": "assets/posters/coco.jpg",
-    "rating": 4.8,
     "favorito": false,
     "calificada": false,
     "color": "#E67E22",
-    "fondoClaro": true
+    "fondoClaro": true,
+    "calificaciones": [4.8, 4.9, 4.7, 5, 5, 5]
   },
   {
     "id": 13,
@@ -237,11 +237,11 @@
     "elenco": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
     "sinopsis": "Un ladrón especializado en robar secretos del subconsciente ajeno recibe la misión inversa: implantar una idea en la mente de alguien.",
     "poster": "assets/posters/origen.jpg",
-    "rating": 4.6,
     "favorito": false,
     "calificada": false,
     "color": "#34495E",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.8, 4.4, 4.4, 4.3, 4.9, 4.4]
   },
   {
     "id": 14,
@@ -255,11 +255,11 @@
     "elenco": ["Miles Teller", "J.K. Simmons"],
     "sinopsis": "Un joven baterista de jazz se somete a los métodos extremos de un instructor obsesionado con llevarlo a la perfección.",
     "poster": "assets/posters/whiplash.jpg",
-    "rating": 4.6,
     "favorito": false,
     "calificada": false,
     "color": "#8B1E3F",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.6, 4.9, 4.3, 4.5, 4.0, 4.2]
   },
   {
     "id": 15,
@@ -273,11 +273,11 @@
     "elenco": ["Tom Hanks", "Tim Allen", "Don Rickles"],
     "sinopsis": "Un vaquero de juguete debe superar sus celos cuando un nuevo juguete espacial se convierte en el favorito de su dueño.",
     "poster": "assets/posters/toy-story.jpg",
-    "rating": 4.5,
     "favorito": false,
     "calificada": false,
     "color": "#F4C542",
-    "fondoClaro": true
+    "fondoClaro": true,
+    "calificaciones": [4.3, 4.6, 4.9, 4.5, 4.6, 4.6]
   },
   {
     "id": 16,
@@ -291,11 +291,11 @@
     "elenco": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
     "sinopsis": "Los Vengadores sobrevivientes se reúnen para deshacer los efectos catastróficos causados por Thanos y restaurar el universo.",
     "poster": "assets/posters/endgame.jpg",
-    "rating": 4.4,
     "favorito": false,
     "calificada": false,
     "color": "#8B0000",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.8, 4.7, 4.5, 4.0, 4.7, 4.5]
   },
   {
     "id": 17,
@@ -309,11 +309,11 @@
     "elenco": ["Joaquin Phoenix", "Robert De Niro", "Zazie Beetz"],
     "sinopsis": "Un comediante fallido y marginado social se hunde progresivamente en la locura, convirtiéndose en un símbolo del caos en Gotham.",
     "poster": "assets/posters/joker.jpg",
-    "rating": 4.3,
     "favorito": false,
     "calificada": false,
     "color": "#4A235A",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.7, 4.3, 5.0, 4.2, 4.9, 4.3]
   },
   {
     "id": 18,
@@ -327,11 +327,11 @@
     "elenco": ["Ryan Gosling", "Emma Stone"],
     "sinopsis": "Un pianista de jazz y una aspirante a actriz se enamoran en Los Ángeles mientras persiguen sus sueños artísticos.",
     "poster": "assets/posters/la-la-land.jpg",
-    "rating": 4.3,
     "favorito": false,
     "calificada": false,
     "color": "#F39C12",
-    "fondoClaro": false
+    "fondoClaro": true,
+    "calificaciones": [4.1, 3.9, 4.2, 4.8, 4.6, 4.5]
   },
   {
     "id": 19,
@@ -345,11 +345,11 @@
     "elenco": ["Shameik Moore", "Jake Johnson", "Hailee Steinfeld"],
     "sinopsis": "Un adolescente de Brooklyn se convierte en Spider-Man y debe unir fuerzas con versiones alternativas del héroe de otros universos.",
     "poster": "assets/posters/spiderman-verso.jpg",
-    "rating": 4.7,
     "favorito": false,
     "calificada": false,
     "color": "#E63946",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [3.9, 4.9, 4.9, 4.5, 4.5, 4.7]
   },
   {
     "id": 20,
@@ -363,11 +363,11 @@
     "elenco": ["Jodie Foster", "Anthony Hopkins"],
     "sinopsis": "Una joven agente del FBI busca la ayuda de un brillante psiquiatra caníbal encarcelado para atrapar a otro asesino en serie.",
     "poster": "assets/posters/silencio-inocentes.jpg",
-    "rating": 4.5,
     "favorito": false,
     "calificada": false,
     "color": "#273746",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [5, 4.1, 4.4, 5.0, 4.3, 4.4]
   },
   {
     "id": 21,
@@ -381,11 +381,11 @@
     "elenco": ["Ian Ziering", "Tara Reid", "John Heard"],
     "sinopsis": "Un tornado gigante levanta a cientos de tiburones y los arroja sobre Los Ángeles, obligando a un grupo de sobrevivientes a luchar contra ellos.",
     "poster": "assets/posters/sharknado.jpg",
-    "rating": 1.4,
     "favorito": false,
     "calificada": false,
     "color": "#1B4F72",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [1.4, 1.0, 1.5, 1.0, 1.7, 1.4]
   },
   {
     "id": 22,
@@ -399,11 +399,11 @@
     "elenco": ["Tommy Wiseau", "Juliette Danielle", "Greg Sestero"],
     "sinopsis": "Un hombre de negocios ve cómo su vida se derrumba cuando descubre que su prometida lo engaña con su mejor amigo.",
     "poster": "assets/posters/the-room.jpg",
-    "rating": 0.8,
     "favorito": false,
     "calificada": false,
     "color": "#C0392B",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.6, 0.9, 1.3, 0.3, 0.8, 0.9]
   },
   {
     "id": 23,
@@ -417,11 +417,11 @@
     "elenco": ["John Travolta", "Barry Pepper", "Forest Whitaker"],
     "sinopsis": "En el año 3000, los pocos humanos que quedan luchan por liberar la Tierra de una raza alienígena que la domina desde hace siglos.",
     "poster": "assets/posters/battlefield-earth.jpg",
-    "rating": 0.9,
     "favorito": false,
     "calificada": false,
     "color": "#566573",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.5, 0.3, 1.2, 1.1, 1.4, 1.1]
   },
   {
     "id": 24,
@@ -435,11 +435,11 @@
     "elenco": ["Francesca Hayward", "Idris Elba", "Judi Dench"],
     "sinopsis": "Una tribu de gatos con apariencia semihumana se reúne una noche al año para decidir quién ascenderá a una nueva vida.",
     "poster": "assets/posters/cats.jpg",
-    "rating": 1.2,
     "favorito": false,
     "calificada": false,
     "color": "#7D3C98",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.2, 1.0, 0.8, 1.3, 1.1, 1.9]
   },
   {
     "id": 25,
@@ -453,11 +453,11 @@
     "elenco": ["Gregory Walcott", "Mona McKinnon", "Bela Lugosi"],
     "sinopsis": "Extraterrestres resucitan cadáveres en un cementerio para probar un plan destinado a impedir que la humanidad cree un arma catastrófica.",
     "poster": "assets/posters/plan9.jpg",
-    "rating": 1.0,
     "favorito": false,
     "calificada": false,
     "color": "#566573",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [0.8, 1.1, 0.5, 0.9, 1.1, 1.3]
   },
   {
     "id": 26,
@@ -471,11 +471,11 @@
     "elenco": ["Cüneyt Arkın", "Aytekin Akkaya"],
     "sinopsis": "Dos guerreros espaciales luchan contra un tirano intergaláctico usando escenas de efectos tomadas de otras películas famosas.",
     "poster": "assets/posters/turkish-star-wars.jpg",
-    "rating": 1.1,
     "favorito": false,
     "calificada": false,
     "color": "#D68910",
-    "fondoClaro": true
+    "fondoClaro": true,
+    "calificaciones": [1.6, 1.1, 0.7, 1.3, 1.3, 1.3]
   },
   {
     "id": 27,
@@ -489,11 +489,11 @@
     "elenco": ["Miles Teller", "Kate Mara", "Michael B. Jordan"],
     "sinopsis": "Cuatro jóvenes científicos obtienen poderes tras un experimento de teletransportación que sale mal y deben aprender a controlarlos.",
     "poster": "assets/posters/fantastic-four-2015.jpg",
-    "rating": 1.5,
     "favorito": false,
     "calificada": false,
     "color": "#2471A3",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.3, 1.9, 1.5, 1.7, 1.9, 1.7]
   },
   {
     "id": 28,
@@ -507,11 +507,11 @@
     "elenco": ["Alan Bagh", "Whitney Moore"],
     "sinopsis": "Una pareja retoma su romance en una tranquila ciudad californiana justo cuando bandadas de aves mutantes comienzan a atacar a los habitantes.",
     "poster": "assets/posters/birdemic.jpg",
-    "rating": 1.3,
     "favorito": false,
     "calificada": false,
     "color": "#2E86C1",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.4, 2.1, 1.4, 1.2, 1.3, 1.8]
   },
   {
     "id": 29,
@@ -525,11 +525,11 @@
     "elenco": ["Tom Neyman", "John Reynolds", "Harold P. Warren"],
     "sinopsis": "Una familia se pierde en la carretera y termina atrapada en una siniestra casa custodiada por un extraño cuidador y su amo, el maestro Torgo.",
     "poster": "assets/posters/manos-hands-of-fate.jpg",
-    "rating": 1.6,
     "favorito": false,
     "calificada": false,
     "color": "#6E2C00",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.6, 1.8, 2.0, 1.4, 1.0, 1.7]
   },
   {
     "id": 30,
@@ -547,11 +547,11 @@
     ],
     "sinopsis": "La historia de dos jóvenes que crecen en una favela de Río de Janeiro, uno buscando ser fotógrafo y otro sumido en el crimen.",
     "poster": "assets/posters/ciudad-de-dios.jpg",
-    "rating": 4.7,
     "favorito": false,
     "calificada": false,
     "color": "#922B21",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.8, 4.5, 5, 4.9, 4.4, 4.9]
   },
   {
     "id": 31,
@@ -565,11 +565,11 @@
     "elenco": ["Audrey Tautou", "Mathieu Kassovitz"],
     "sinopsis": "Una joven camarera parisina decide dedicarse a mejorar en secreto la vida de las personas que la rodean, hasta que encuentra el amor.",
     "poster": "assets/posters/amelie.jpg",
-    "rating": 4.5,
     "favorito": false,
     "calificada": false,
     "color": "#F5B041",
-    "fondoClaro": false
+    "fondoClaro": true,
+    "calificaciones": [4.4, 4.0, 4.7, 4.5, 4.2, 4.7]
   },
   {
     "id": 32,
@@ -583,11 +583,11 @@
     "elenco": ["Rumi Hiiragi", "Miyu Irino"],
     "sinopsis": "Una niña queda atrapada en un mundo mágico gobernado por espíritus y debe trabajar en una casa de baños para salvar a sus padres.",
     "poster": "assets/posters/chihiro.jpg",
-    "rating": 4.8,
     "favorito": false,
     "calificada": false,
     "color": "#1ABC9C",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [5.0, 4.6, 4.9, 5, 4.6, 4.9]
   },
   {
     "id": 33,
@@ -601,11 +601,11 @@
     "elenco": ["Dev Patel", "Freida Pinto"],
     "sinopsis": "Un joven de los barrios pobres de Bombay se acerca a ganar un concurso de preguntas gracias a las duras experiencias de su vida.",
     "poster": "assets/posters/slumdog.jpg",
-    "rating": 4.3,
     "favorito": false,
     "calificada": false,
     "color": "#D35400",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [4.3, 5, 3.6, 4.5, 4.2, 4.3]
   },
   {
     "id": 34,
@@ -619,11 +619,11 @@
     "elenco": ["Ryan Gosling", "Rachel McAdams", "James Garner"],
     "sinopsis": "Un anciano le lee a una mujer con demencia la historia de un romance de juventud entre una joven adinerada y un chico humilde.",
     "poster": "assets/posters/diario-pasion.jpg",
-    "rating": 4.2,
     "favorito": false,
     "calificada": false,
     "color": "#B03A2E",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [4.9, 4.2, 5.0, 4.0, 4.3, 4.0]
   },
   {
     "id": 35,
@@ -637,11 +637,11 @@
     "elenco": ["Daniel Craig", "Harrison Ford", "Olivia Wilde"],
     "sinopsis": "En el viejo oeste, un forastero amnésico y una banda de vaqueros deben enfrentarse a invasores extraterrestres que secuestran gente.",
     "poster": "assets/posters/cowboys-aliens.jpg",
-    "rating": 2.6,
     "favorito": false,
     "calificada": false,
     "color": "#7F8C8D",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [2.4, 2.6, 2.5, 2.7, 1.9, 3.3]
   },
   {
     "id": 36,
@@ -655,11 +655,11 @@
     "elenco": ["Brendan Fraser", "Elizabeth Hurley"],
     "sinopsis": "Un joven solitario hace un pacto con el diablo y recibe siete deseos, pero cada uno se cumple de una forma cómicamente equivocada.",
     "poster": "assets/posters/bedazzled.jpg",
-    "rating": 2.9,
     "favorito": false,
     "calificada": false,
     "color": "#8E44AD",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [2.8, 3.5, 2.5, 3.0, 4.0, 2.6]
   },
   {
     "id": 37,
@@ -673,11 +673,11 @@
     "elenco": ["Ralph Fiennes", "Tony Revolori", "Saoirse Ronan"],
     "sinopsis": "El legendario conserje de un hotel europeo y su joven aprendiz se ven envueltos en el robo de una obra de arte y una herencia disputada.",
     "poster": "assets/posters/gran-hotel-budapest.jpg",
-    "rating": 4.4,
     "favorito": false,
     "calificada": false,
     "color": "#7D6608",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [3.9, 4.2, 4.6, 4.6, 4.9, 4.3]
   },
   {
     "id": 38,
@@ -691,11 +691,11 @@
     "elenco": ["Tom Hanks", "Helen Hunt"],
     "sinopsis": "Un ejecutivo de una empresa de mensajería queda varado en una isla desierta tras un accidente aéreo y debe aprender a sobrevivir solo.",
     "poster": "assets/posters/naufrago.jpg",
-    "rating": 4.3,
     "favorito": false,
     "calificada": false,
     "color": "#4A4A4A",
-    "fondoClaro": true
+    "fondoClaro": false,
+    "calificaciones": [3.7, 4.1, 4.7, 4.5, 3.6, 4.3]
   },
   {
     "id": 39,
@@ -709,11 +709,11 @@
     "elenco": ["Craig T. Nelson", "Holly Hunter", "Samuel L. Jackson"],
     "sinopsis": "Una familia de superhéroes retirados debe volver a la acción para enfrentar a un nuevo villano que amenaza al mundo.",
     "poster": "assets/posters/increibles.jpg",
-    "rating": 4.5,
     "favorito": false,
     "calificada": false,
     "color": "#F1C40F",
-    "fondoClaro": true
+    "fondoClaro": true,
+    "calificaciones": [5.0, 5, 4.7, 4.6, 4.1, 4.2]
   },
   {
     "id": 40,
@@ -727,11 +727,11 @@
     "elenco": ["Ellen Burstyn", "Jared Leto", "Jennifer Connelly"],
     "sinopsis": "Cuatro personas ven cómo sus sueños y relaciones se destruyen progresivamente a causa de distintas adicciones.",
     "poster": "assets/posters/requiem-sueno.jpg",
-    "rating": 4.6,
     "favorito": false,
     "calificada": false,
     "color": "#17202A",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.6, 4.8, 4.8, 4.4, 4.2, 4.3]
   },
   {
     "id": 41,
@@ -745,11 +745,11 @@
     "elenco": ["Rachel Melvin", "Cortney Palm", "Lexi Atkins"],
     "sinopsis": "Un grupo de amigas de viaje en una cabaña junto al lago debe enfrentarse a una horda de castores zombis creados por un derrame tóxico.",
     "poster": "assets/posters/zombeavers.jpg",
-    "rating": 1.8,
     "favorito": false,
     "calificada": false,
     "color": "#2ECC71",
-    "fondoClaro": true
+    "fondoClaro": true,
+    "calificaciones": [1.4, 2.0, 1.0, 1.7, 2.0, 2.3]
   },
   {
     "id": 42,
@@ -763,11 +763,11 @@
     "elenco": ["Danny Trejo", "Rachel Nichols"],
     "sinopsis": "Un tiburón mutante de tres cabezas creado por contaminación química aterroriza las costas de un pequeño puerto turístico.",
     "poster": "assets/posters/tiburon-tres-cabezas.jpg",
-    "rating": 1.2,
     "favorito": false,
     "calificada": false,
     "color": "#117A65",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.2, 1.6, 1.1, 0.9, 1.0, 1.7]
   },
   {
     "id": 43,
@@ -781,11 +781,11 @@
     "elenco": ["Will Smith", "Margot Robbie", "Jared Leto"],
     "sinopsis": "El gobierno recluta a un grupo de criminales superpoderosos para una peligrosa misión secreta a cambio de reducir sus condenas.",
     "poster": "assets/posters/suicide-squad-2016.jpg",
-    "rating": 2.2,
     "favorito": false,
     "calificada": false,
     "color": "#2C3E50",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [2.5, 2.4, 3.4, 2.2, 2.4, 2.3]
   },
   {
     "id": 44,
@@ -799,11 +799,11 @@
     "elenco": ["Travis Fimmel", "Paula Patton", "Toby Kebbell"],
     "sinopsis": "Humanos y orcos se enfrentan en una guerra por el control de un reino cuando una raza de guerreros llega desde un mundo moribundo.",
     "poster": "assets/posters/warcraft.jpg",
-    "rating": 2.4,
     "favorito": false,
     "calificada": false,
     "color": "#8E44AD",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [2.3, 3.2, 2.9, 1.9, 2.3, 2.5]
   },
   {
     "id": 45,
@@ -817,11 +817,11 @@
     "elenco": ["Amy Adams", "Jeremy Renner", "Forest Whitaker"],
     "sinopsis": "Una lingüista es reclutada por el ejército para descifrar el idioma de una nave alienígena que ha aterrizado en la Tierra.",
     "poster": "assets/posters/viaje-vida.jpg",
-    "rating": 4.4,
     "favorito": false,
     "calificada": false,
     "color": "#1ABC9C",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.7, 3.9, 3.6, 3.7, 4.4, 4.4]
   },
   {
     "id": 46,
@@ -835,11 +835,11 @@
     "elenco": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"],
     "sinopsis": "Un replicante policía descubre un secreto enterrado que podría sumir a lo que queda de la sociedad en el caos total.",
     "poster": "assets/posters/blade-runner-2049.jpg",
-    "rating": 4.4,
     "favorito": false,
     "calificada": false,
     "color": "#1B2631",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.5, 4.1, 4.0, 3.7, 4.5, 4.5]
   },
   {
     "id": 47,
@@ -853,11 +853,11 @@
     "elenco": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult"],
     "sinopsis": "En un futuro post-apocalíptico, un solitario sobreviviente se une a una guerrera rebelde para escapar de un tirano del desierto.",
     "poster": "assets/posters/mad-max-furia.jpg",
-    "rating": 4.6,
     "favorito": false,
     "calificada": false,
     "color": "#C0392B",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [4.9, 4.9, 4.5, 5, 4.6, 4.4]
   },
   {
     "id": 48,
@@ -871,11 +871,11 @@
     "elenco": ["Lauren Bronleewe", "Stuart Rigby", "Bailey Gaddis"],
     "sinopsis": "Un equipo de arqueólogos descubre una pirámide perdida en el desierto egipcio y desata accidentalmente una antigua maldición.",
     "poster": "assets/posters/mummy-resurrected.jpg",
-    "rating": 1.5,
     "favorito": false,
     "calificada": false,
     "color": "#6E2C00",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [1.3, 1.3, 0.7, 1.6, 1.6, 1.4]
   },
   {
     "id": 49,
@@ -889,11 +889,11 @@
     "elenco": ["Tim Curry", "Susan Sarandon", "Barry Bostwick"],
     "sinopsis": "Una joven pareja con el auto averiado busca refugio en el extraño castillo de un excéntrico científico durante una noche de tormenta.",
     "poster": "assets/posters/rocky-horror.jpg",
-    "rating": 3.9,
     "favorito": false,
     "calificada": false,
     "color": "#922B21",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [3.7, 4.0, 4.5, 3.9, 3.7, 3.7]
   },
   {
     "id": 50,
@@ -907,10 +907,10 @@
     "elenco": ["Danny DeVito", "Matthew Broderick", "Kristin Davis"],
     "sinopsis": "Un padre de familia suburbano se obsesiona con superar la extravagante decoración navideña de su nuevo vecino, desatando una guerra de luces.",
     "poster": "assets/posters/deck-the-halls.jpg",
-    "rating": 2.3,
     "favorito": false,
     "calificada": false,
     "color": "#145A32",
-    "fondoClaro": false
+    "fondoClaro": false,
+    "calificaciones": [2.3, 1.9, 2.3, 2.3, 2.9, 2.6]
   }
 ]

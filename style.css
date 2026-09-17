@@ -126,19 +126,19 @@ input[type="text"] {
   font-family: inherit;
   font-size: 1.2rem;
   transition: box-shadow 0.2s ease;
-  pointer-events: none;
+  /* pointer-events: none; */
   user-select: none;
 }
 
-input[type="text"]:focus {
+.text-focus {
   box-shadow: 0px 0px 15px 2px var(--beige);
 }
 
-.form-radio:has(input[type="radio"]:checked)
+/* .form-radio:has(input[type="radio"]:checked)
   + .container-filter-section
   input[type="text"] {
   pointer-events: auto;
-}
+} */
 
 /* Estilo del formulario de busqueda */
 
