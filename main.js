@@ -8,66 +8,64 @@ const contenedor_img = document.querySelector(".contenedor-img");
 const dialog = document.getElementById("rating-dialog");
 const rating_close = document.getElementById("rating-close");
 const list_options = document.querySelector(".list-options");
-const reset_icon = document.querySelector(".non-filter-icon");
+const reset_filter_icon = document.querySelector(".non-filter-icon");
 const find_movie = document.getElementById("find-movie");
 const radios = document.querySelector(".radios");
+const reset_find_icon = document.querySelector(".quit-find-icon");
+const all_radio_buttons = document.querySelectorAll(".radiobutton");
 
 contenedor_img.addEventListener("click", mostrarModal);
 contenedor_img.addEventListener("click", agregarFavoritoCalificada);
 rating_close.addEventListener("click", cerrarModal);
 list_options.addEventListener("click", filtrarPeliculas);
-reset_icon.addEventListener("click", resetPeliculas);
+reset_filter_icon.addEventListener("click", resetPeliculas);
 find_movie.addEventListener("keyup", buscarPeliculas);
 radios.addEventListener("click", obtenerTipoBusqueda);
+reset_find_icon.addEventListener("click", quitarSeleccionRadios);
 
 mostrarPeliculas();
 
 function mostrarPeliculas() {
   let html = ``;
+
+  // Como el diseño ya no depende del fondo, usamos una sola plantilla para todas
   peliculas_filtradas.forEach((peli) => {
     html += `
       <div class="contenedor-peli">
+        <p class="peli-rating">${peli.rating.toFixed(2)}</p>
         <img src="${peli.poster}" alt="${peli.titulo}">
         <span class="material-symbols-outlined non-favorite heart" id="peli-${peli.id}">favorite</span>
         <span class="material-symbols-outlined non-calificated star" id="peli-${peli.id}">star</span>
-    </div>
-    `;
+      </div>`;
   });
+
   contenedor_img.innerHTML = html;
 }
 
 function agregarFavoritoCalificada(evento) {
-  let target = evento.target;
-  if (target.tagName == "SPAN") {
-    let target_id = evento.target.id;
-    let numero_id = target_id.split("-")[1];
-    let pelicula_encontrada = peliculas_filtradas.find(
-      (peli) => peli.id == numero_id,
-    );
+  const target = evento.target;
 
-    if (target.classList.contains("heart")) {
-      target.classList.toggle("favorite-heart");
-      target.classList.toggle("non-favorite");
-      if (target.classList.contains("favorite-heart")) {
-        pelicula_encontrada.favorito = true;
-      } else if (target.classList.contains("non-favorite")) {
-        pelicula_encontrada.favorito = false;
-      }
-    } else if (target.classList.contains("star")) {
-      target.classList.toggle("calificated");
-      target.classList.toggle("non-calificated");
-      if (target.classList.contains("calificated")) {
-        pelicula_encontrada.calificada = true;
-      } else if (target.classList.contains("non-calificated")) {
-        pelicula_encontrada.calificada = false;
-      }
-    }
+  if (target.tagName !== "SPAN") return;
+
+  const numero_id = target.id.split("-")[1];
+  const pelicula = peliculas_filtradas.find((peli) => peli.id == numero_id);
+
+  if (target.classList.contains("heart")) {
+    pelicula.favorito = !pelicula.favorito;
+
+    target.classList.toggle("favorite-heart", pelicula.favorito);
+    target.classList.toggle("non-favorite", !pelicula.favorito);
+  } else if (target.classList.contains("star")) {
+    pelicula.calificada = !pelicula.calificada;
+
+    target.classList.toggle("calificated", pelicula.calificada);
+    target.classList.toggle("non-calificated", !pelicula.calificada);
   }
 }
 
 function mostrarModal(evento) {
   let target = evento.target;
-
+  console.log(target);
   if (
     target.tagName == "SPAN" &&
     target.classList.contains("star") &&
@@ -118,8 +116,6 @@ function obtenerTipoBusqueda(evento) {
 
 function buscarPeliculas(evento) {
   let target = evento.target;
-  console.log(evento);
-  console.log(target.value);
 
   if (target.value == "") {
     resetPeliculas();
@@ -148,4 +144,12 @@ function buscarPeliculas(evento) {
 
     mostrarPeliculas();
   }
+}
+
+function quitarSeleccionRadios() {
+  all_radio_buttons.forEach((elemento) => {
+    if (elemento.checked) {
+      elemento.checked = false;
+    }
+  });
 }

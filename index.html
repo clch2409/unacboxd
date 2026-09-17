@@ -23,16 +23,16 @@
   <form class="form-busqueda">
     <div class="form-radio">
       <div class="radios">
-        <input type="radio" id="peli" name="busqueda" value="pelicula">
+        <input type="radio" class="radiobutton" id="peli" name="busqueda" value="pelicula">
         <label for="peli">Pelicula</label>
 
-        <input type="radio" id="direc" name="busqueda" value="director">
+        <input type="radio" class="radiobutton" id="direc" name="busqueda" value="director">
         <label for="direc">Director</label>
 
-        <input type="radio" id="actor" name="busqueda" value="actor">
+        <input type="radio" class="radiobutton" id="actor" name="busqueda" value="actor">
         <label for="actor">Actor/Actriz</label>
 
-        <input type="radio" id="gen" name="busqueda" value="genero">
+        <input type="radio" class="radiobutton" id="gen" name="busqueda" value="genero">
         <label for="gen">Genero</label>
       </div>
       <span class="material-symbols-outlined quit-find-icon">close</span>
@@ -59,6 +59,7 @@
 
   <div class="contenedor-img">
     <div class="contenedor-peli">
+      <p class="peli-rating"></p>
       <img src="./assets/posters/birdemic.jpg" alt="Imagen 1">
       <span class="material-symbols-outlined non-favorite heart">favorite</span>
       <span class="material-symbols-outlined non-favorite star">star</span>

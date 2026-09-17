@@ -200,6 +200,10 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
+/*Estilo de la zona de filtrado*/
+
+/* Estilo de las peliculas */
+
 .contenedor-img {
   text-align: center;
   display: grid;
@@ -228,14 +232,16 @@ input[type="text"]:focus {
 }
 
 .contenedor-peli img:hover,
-.contenedor-peli:has(span:hover) img {
+.contenedor-peli:has(span:hover) img,
+.contenedor-peli:has(p:hover) img {
   outline-color: var(--beige);
   box-shadow: 0px 0 20px 5px var(--beige);
   cursor: pointer;
 }
 
 .star,
-.heart {
+.heart,
+.peli-rating {
   font-variation-settings: "FILL" 1;
   opacity: 0;
   visibility: hidden;
@@ -258,7 +264,13 @@ input[type="text"]:focus {
   right: 16px;
 }
 
-.contenedor-peli:hover span {
+.peli-rating {
+  top: 16px;
+  right: 16px;
+}
+
+.contenedor-peli:hover span,
+.contenedor-peli:hover p {
   transform: scale(1.5);
   visibility: visible;
   opacity: 1;
@@ -359,16 +371,22 @@ input[type="text"]:focus {
 }
 
 .non-favorite,
-.non-calificated {
-  color: var(--navy-dark);
+.non-calificated,
+.peli-rating {
+  color: var(--beige);
+  text-shadow:
+    0px 2px 8px rgba(0, 0, 0, 0.7),
+    0px 0px 2px rgba(0, 0, 0, 0.9);
 }
 
 .favorite-heart {
   color: var(--orange);
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .calificated {
   color: gold;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .dont-move {

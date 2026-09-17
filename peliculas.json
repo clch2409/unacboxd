@@ -14,7 +14,8 @@
     "rating": 4.9,
     "favorito": false,
     "calificada": false,
-    "color": "#5B1A1A"
+    "color": "#5B1A1A",
+    "fondoClaro": true
   },
   {
     "id": 2,
@@ -36,7 +37,8 @@
     "rating": 4.7,
     "favorito": false,
     "calificada": false,
-    "color": "#D35400"
+    "color": "#D35400",
+    "fondoClaro": true
   },
   {
     "id": 3,
@@ -58,7 +60,8 @@
     "rating": 4.8,
     "favorito": false,
     "calificada": false,
-    "color": "#1C2733"
+    "color": "#1C2733",
+    "fondoClaro": false
   },
   {
     "id": 4,
@@ -75,7 +78,8 @@
     "rating": 4.9,
     "favorito": false,
     "calificada": false,
-    "color": "#52616B"
+    "color": "#52616B",
+    "fondoClaro": false
   },
   {
     "id": 5,
@@ -92,7 +96,8 @@
     "rating": 4.5,
     "favorito": false,
     "calificada": false,
-    "color": "#147D92"
+    "color": "#147D92",
+    "fondoClaro": false
   },
   {
     "id": 6,
@@ -109,7 +114,8 @@
     "rating": 4.7,
     "favorito": false,
     "calificada": false,
-    "color": "#16A085"
+    "color": "#16A085",
+    "fondoClaro": false
   },
   {
     "id": 7,
@@ -126,7 +132,8 @@
     "rating": 4.6,
     "favorito": false,
     "calificada": false,
-    "color": "#D4A017"
+    "color": "#D4A017",
+    "fondoClaro": true
   },
   {
     "id": 8,
@@ -143,7 +150,8 @@
     "rating": 4.6,
     "favorito": false,
     "calificada": false,
-    "color": "#253B80"
+    "color": "#253B80",
+    "fondoClaro": true
   },
   {
     "id": 9,
@@ -160,7 +168,8 @@
     "rating": 4.8,
     "favorito": false,
     "calificada": false,
-    "color": "#6B4F8A"
+    "color": "#6B4F8A",
+    "fondoClaro": true
   },
   {
     "id": 10,
@@ -177,7 +186,8 @@
     "rating": 4.5,
     "favorito": false,
     "calificada": false,
-    "color": "#8E2C2C"
+    "color": "#8E2C2C",
+    "fondoClaro": true
   },
   {
     "id": 11,
@@ -194,7 +204,8 @@
     "rating": 4.7,
     "favorito": false,
     "calificada": false,
-    "color": "#2F6B4F"
+    "color": "#2F6B4F",
+    "fondoClaro": false
   },
   {
     "id": 12,
@@ -211,7 +222,8 @@
     "rating": 4.8,
     "favorito": false,
     "calificada": false,
-    "color": "#E67E22"
+    "color": "#E67E22",
+    "fondoClaro": true
   },
   {
     "id": 13,
@@ -228,7 +240,8 @@
     "rating": 4.6,
     "favorito": false,
     "calificada": false,
-    "color": "#34495E"
+    "color": "#34495E",
+    "fondoClaro": false
   },
   {
     "id": 14,
@@ -245,7 +258,8 @@
     "rating": 4.6,
     "favorito": false,
     "calificada": false,
-    "color": "#8B1E3F"
+    "color": "#8B1E3F",
+    "fondoClaro": false
   },
   {
     "id": 15,
@@ -262,7 +276,8 @@
     "rating": 4.5,
     "favorito": false,
     "calificada": false,
-    "color": "#F4C542"
+    "color": "#F4C542",
+    "fondoClaro": true
   },
   {
     "id": 16,
@@ -279,7 +294,8 @@
     "rating": 4.4,
     "favorito": false,
     "calificada": false,
-    "color": "#8B0000"
+    "color": "#8B0000",
+    "fondoClaro": false
   },
   {
     "id": 17,
@@ -296,7 +312,8 @@
     "rating": 4.3,
     "favorito": false,
     "calificada": false,
-    "color": "#4A235A"
+    "color": "#4A235A",
+    "fondoClaro": false
   },
   {
     "id": 18,
@@ -313,7 +330,8 @@
     "rating": 4.3,
     "favorito": false,
     "calificada": false,
-    "color": "#F39C12"
+    "color": "#F39C12",
+    "fondoClaro": false
   },
   {
     "id": 19,
@@ -330,7 +348,8 @@
     "rating": 4.7,
     "favorito": false,
     "calificada": false,
-    "color": "#E63946"
+    "color": "#E63946",
+    "fondoClaro": false
   },
   {
     "id": 20,
@@ -347,7 +366,8 @@
     "rating": 4.5,
     "favorito": false,
     "calificada": false,
-    "color": "#273746"
+    "color": "#273746",
+    "fondoClaro": false
   },
   {
     "id": 21,
@@ -364,7 +384,8 @@
     "rating": 1.4,
     "favorito": false,
     "calificada": false,
-    "color": "#1B4F72"
+    "color": "#1B4F72",
+    "fondoClaro": true
   },
   {
     "id": 22,
@@ -381,7 +402,8 @@
     "rating": 0.8,
     "favorito": false,
     "calificada": false,
-    "color": "#C0392B"
+    "color": "#C0392B",
+    "fondoClaro": false
   },
   {
     "id": 23,
@@ -398,7 +420,8 @@
     "rating": 0.9,
     "favorito": false,
     "calificada": false,
-    "color": "#566573"
+    "color": "#566573",
+    "fondoClaro": false
   },
   {
     "id": 24,
@@ -415,7 +438,8 @@
     "rating": 1.2,
     "favorito": false,
     "calificada": false,
-    "color": "#7D3C98"
+    "color": "#7D3C98",
+    "fondoClaro": false
   },
   {
     "id": 25,
@@ -432,7 +456,8 @@
     "rating": 1.0,
     "favorito": false,
     "calificada": false,
-    "color": "#566573"
+    "color": "#566573",
+    "fondoClaro": true
   },
   {
     "id": 26,
@@ -449,7 +474,8 @@
     "rating": 1.1,
     "favorito": false,
     "calificada": false,
-    "color": "#D68910"
+    "color": "#D68910",
+    "fondoClaro": true
   },
   {
     "id": 27,
@@ -466,7 +492,8 @@
     "rating": 1.5,
     "favorito": false,
     "calificada": false,
-    "color": "#2471A3"
+    "color": "#2471A3",
+    "fondoClaro": false
   },
   {
     "id": 28,
@@ -483,7 +510,8 @@
     "rating": 1.3,
     "favorito": false,
     "calificada": false,
-    "color": "#2E86C1"
+    "color": "#2E86C1",
+    "fondoClaro": false
   },
   {
     "id": 29,
@@ -500,7 +528,8 @@
     "rating": 1.6,
     "favorito": false,
     "calificada": false,
-    "color": "#6E2C00"
+    "color": "#6E2C00",
+    "fondoClaro": false
   },
   {
     "id": 30,
@@ -521,7 +550,8 @@
     "rating": 4.7,
     "favorito": false,
     "calificada": false,
-    "color": "#922B21"
+    "color": "#922B21",
+    "fondoClaro": false
   },
   {
     "id": 31,
@@ -538,7 +568,8 @@
     "rating": 4.5,
     "favorito": false,
     "calificada": false,
-    "color": "#F5B041"
+    "color": "#F5B041",
+    "fondoClaro": false
   },
   {
     "id": 32,
@@ -555,7 +586,8 @@
     "rating": 4.8,
     "favorito": false,
     "calificada": false,
-    "color": "#1ABC9C"
+    "color": "#1ABC9C",
+    "fondoClaro": false
   },
   {
     "id": 33,
@@ -572,7 +604,8 @@
     "rating": 4.3,
     "favorito": false,
     "calificada": false,
-    "color": "#D35400"
+    "color": "#D35400",
+    "fondoClaro": true
   },
   {
     "id": 34,
@@ -589,7 +622,8 @@
     "rating": 4.2,
     "favorito": false,
     "calificada": false,
-    "color": "#B03A2E"
+    "color": "#B03A2E",
+    "fondoClaro": true
   },
   {
     "id": 35,
@@ -606,7 +640,8 @@
     "rating": 2.6,
     "favorito": false,
     "calificada": false,
-    "color": "#7F8C8D"
+    "color": "#7F8C8D",
+    "fondoClaro": false
   },
   {
     "id": 36,
@@ -623,7 +658,8 @@
     "rating": 2.9,
     "favorito": false,
     "calificada": false,
-    "color": "#8E44AD"
+    "color": "#8E44AD",
+    "fondoClaro": false
   },
   {
     "id": 37,
@@ -640,7 +676,8 @@
     "rating": 4.4,
     "favorito": false,
     "calificada": false,
-    "color": "#7D6608"
+    "color": "#7D6608",
+    "fondoClaro": false
   },
   {
     "id": 38,
@@ -657,7 +694,8 @@
     "rating": 4.3,
     "favorito": false,
     "calificada": false,
-    "color": "#4A4A4A"
+    "color": "#4A4A4A",
+    "fondoClaro": true
   },
   {
     "id": 39,
@@ -674,7 +712,8 @@
     "rating": 4.5,
     "favorito": false,
     "calificada": false,
-    "color": "#F1C40F"
+    "color": "#F1C40F",
+    "fondoClaro": true
   },
   {
     "id": 40,
@@ -691,7 +730,8 @@
     "rating": 4.6,
     "favorito": false,
     "calificada": false,
-    "color": "#17202A"
+    "color": "#17202A",
+    "fondoClaro": false
   },
   {
     "id": 41,
@@ -708,7 +748,8 @@
     "rating": 1.8,
     "favorito": false,
     "calificada": false,
-    "color": "#2ECC71"
+    "color": "#2ECC71",
+    "fondoClaro": true
   },
   {
     "id": 42,
@@ -725,7 +766,8 @@
     "rating": 1.2,
     "favorito": false,
     "calificada": false,
-    "color": "#117A65"
+    "color": "#117A65",
+    "fondoClaro": false
   },
   {
     "id": 43,
@@ -742,7 +784,8 @@
     "rating": 2.2,
     "favorito": false,
     "calificada": false,
-    "color": "#2C3E50"
+    "color": "#2C3E50",
+    "fondoClaro": false
   },
   {
     "id": 44,
@@ -759,7 +802,8 @@
     "rating": 2.4,
     "favorito": false,
     "calificada": false,
-    "color": "#8E44AD"
+    "color": "#8E44AD",
+    "fondoClaro": false
   },
   {
     "id": 45,
@@ -776,7 +820,8 @@
     "rating": 4.4,
     "favorito": false,
     "calificada": false,
-    "color": "#1ABC9C"
+    "color": "#1ABC9C",
+    "fondoClaro": false
   },
   {
     "id": 46,
@@ -793,7 +838,8 @@
     "rating": 4.4,
     "favorito": false,
     "calificada": false,
-    "color": "#1B2631"
+    "color": "#1B2631",
+    "fondoClaro": false
   },
   {
     "id": 47,
@@ -810,7 +856,8 @@
     "rating": 4.6,
     "favorito": false,
     "calificada": false,
-    "color": "#C0392B"
+    "color": "#C0392B",
+    "fondoClaro": false
   },
   {
     "id": 48,
@@ -827,7 +874,8 @@
     "rating": 1.5,
     "favorito": false,
     "calificada": false,
-    "color": "#6E2C00"
+    "color": "#6E2C00",
+    "fondoClaro": false
   },
   {
     "id": 49,
@@ -844,7 +892,8 @@
     "rating": 3.9,
     "favorito": false,
     "calificada": false,
-    "color": "#922B21"
+    "color": "#922B21",
+    "fondoClaro": false
   },
   {
     "id": 50,
@@ -861,6 +910,7 @@
     "rating": 2.3,
     "favorito": false,
     "calificada": false,
-    "color": "#145A32"
+    "color": "#145A32",
+    "fondoClaro": false
   }
 ]
