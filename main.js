@@ -6,12 +6,13 @@ let tipoBusqueda = "";
 let idPeliCalificar = undefined;
 let modificandoCalificacion = false;
 
+/*MANEJO DEL DOM -> DOM: DOCUMENT OBJECT MODEL*/
 const contenedor_img = document.querySelector(".contenedor-img");
 const dialog = document.getElementById("rating-dialog");
 const rating_close = document.getElementById("rating-close");
 const list_options = document.querySelector(".list-options");
 const reset_filter_icon = document.querySelector(".non-filter-icon");
-const find_movie = document.getElementById("find-movie");
+const find_movie = document.querySelector("#find-movie");
 const radios = document.querySelector(".radios");
 const reset_find_icon = document.querySelector(".quit-find-icon");
 const all_radio_buttons = document.querySelectorAll(".radiobutton");
@@ -24,7 +25,7 @@ rating_close.addEventListener("click", cerrarModal);
 list_options.addEventListener("click", filtrarPeliculas);
 reset_filter_icon.addEventListener("click", resetPeliculas);
 find_movie.addEventListener("keyup", buscarPeliculas);
-find_movie.addEventListener("click", (evento) => {
+find_movie.addEventListener("click", () => {
   if (find_movie.readOnly) {
     alert(
       "Seleccione un método de busqueda para utilizar la barra de búsqueda 🤓",
@@ -108,6 +109,7 @@ function resetPeliculas() {
 }
 
 function filtrarPeliculas(evento) {
+  resetPeliculas();
   let target = evento.target;
   let id_target = target.id;
 
@@ -116,15 +118,36 @@ function filtrarPeliculas(evento) {
   } else if (id_target == "cal") {
     peliculas_filtradas = peliculas_original.filter((peli) => peli.calificada);
   } else if (id_target == "topMejor") {
-    peliculas_filtradas = peliculas_original.sort(
-      (peli, peli2) => peli2.rating - peli.rating,
-    );
+    peliculas_filtradas = [
+      ...peliculas_original.sort(
+        (peli, peli2) =>
+          peli2.calificaciones.reduce(
+            (acumulador, calificacion) => acumulador + calificacion,
+            0,
+          ) -
+          peli.calificaciones.reduce(
+            (acumulador, calificacion) => acumulador + calificacion,
+            0,
+          ),
+      ),
+    ];
   } else if (id_target == "topPeor") {
-    peliculas_filtradas = peliculas_original.sort(
-      (peli, peli2) => peli.rating - peli2.rating,
-    );
+    console.log("entre");
+    peliculas_filtradas = [
+      ...peliculas_original.sort(
+        (peli, peli2) =>
+          peli.calificaciones.reduce(
+            (acumulador, calificacion) => acumulador + calificacion,
+            0,
+          ) -
+          peli2.calificaciones.reduce(
+            (acumulador, calificacion) => acumulador + calificacion,
+            0,
+          ),
+      ),
+    ];
   }
-
+  console.log(peliculas_filtradas);
   mostrarPeliculas();
 }
 
@@ -181,6 +204,8 @@ function quitarSeleccionRadios() {
   if (!find_movie.readOnly) {
     find_movie.readOnly = true;
     find_movie.classList.toggle("text-focus");
+    find_movie.value = "";
+    resetPeliculas();
   }
 }
 
